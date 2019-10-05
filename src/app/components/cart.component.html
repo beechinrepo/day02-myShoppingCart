@@ -1,0 +1,13 @@
+<h2>My Cart</h2>
+
+<div *ngIf="cart.length==0">
+    <h2>Your cart is empty</h2>
+</div>
+
+<div *ngFor= "let i of cart; let j=index;" class="inv-line" (click)="deselectItem(i.sku.itemId, j)">   
+    <img [src]="i.sku.image" class="inv-img">
+    <div class="inv-detail">
+        <div><code>{{i.sku.name}}</code></div>
+        <div>Quantity: {{i.quantity}}</div>
+    </div>
+</div>

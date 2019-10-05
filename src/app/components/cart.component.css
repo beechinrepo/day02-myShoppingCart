@@ -1,0 +1,32 @@
+.inv-img {
+    height: 8vh;
+    width: auto;
+  }
+  
+  code {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .grey-background {
+    background-color: lightgrey;
+  }
+  
+  .inv-line {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  
+  .inv-line:hover {
+    background-color: lightblue;
+  }
+  
+  .inv-detail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+  }

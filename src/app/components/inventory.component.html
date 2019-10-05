@@ -1,0 +1,9 @@
+<h2>Inventory</h2>
+
+<div *ngFor= "let i of inventory; let j=index;" class="inv-line" (click)="selectItem(i.itemId, j)" [ngClass]="{ 'grey-background': j % 2}">   
+    <img [src]="i.image" class="inv-img">
+    <div class="inv-detail">
+        <div><code>{{i.name}}</code></div>
+        <div>${{i.unitPrice}}</div>
+    </div>
+</div>
