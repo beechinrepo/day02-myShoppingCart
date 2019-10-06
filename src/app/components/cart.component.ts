@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { LineItem } from '../models';
 import { SKU, INVENTORY } from '../models';
@@ -11,15 +11,16 @@ import { SKU, INVENTORY } from '../models';
 export class CartComponent implements OnInit {
   readonly inventory = INVENTORY;
 
-  @Input() cart: LineItem[] = [];  
- 
+  @Input() cart: LineItem[] = [];
+
+  @Output()
   onRemoveItem = new EventEmitter<SKU>();
 
   constructor() { }
 
   ngOnInit() {
   }
-  
+
   deselectItem(itemId, idx) {
     console.info('item deselected ', itemId, idx);
     this.onRemoveItem.next(this.inventory[idx]);
