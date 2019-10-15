@@ -7,8 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TotalComponent implements OnInit {
   @Input() total: number
+
   discountCode = 0;
-  grandTotal: number;
+  grandTotal: string;
+  
   constructor() { }
 
   ngOnInit() {
